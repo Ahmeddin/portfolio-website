@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmeddin | Personal Site</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <nav class="top-nav">
+    <div class="logo">Ahmeddin</div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle">☰</div>
+  </nav>
+
+  
+  <main id="home" class="hero-stage">
+    <div class="slides" id="slides">
+      <div class="slide"><img class="slide-img" src="./Assets/ph1.jpg" alt="anime boy 1"></div>
+      <div class="slide"><img class="slide-img" src="./Assets/ph2.jpg" alt="anime boy 2"></div>
+      <div class="slide"><img class="slide-img" src="./Assets/ph3.jpg" alt="anime boy 3"></div>
+    </div>
+
+    
+    <div class="hero-text">
+      <h1 class="hero-name">Ahmed Hussen</h1>
+      <p class="hero-sub">3rd Year — Software Engineering Student<br>Arba Minch University</p>
+
+      <div class="hero-tags" aria-hidden="true">
+        <span>Student</span>
+        <span>Front-end</span>
+        <span>Back-end</span>
+        <span>Ethiopia</span>
+        <span>Web3</span>
+        <span>Teck Enthusiast</span>
+        <span>UI/UX design</span>
+      </div>
+    </div>
+  </main>
+
+  
+  <section id="about">
+    <div class="container about-card">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Ahmed Hussen</strong>, a 3rd-year Software Engineering student at Arba Minch University. I create clean and user-friendly websites using HTML, CSS, and JavaScript, while continuously expanding my skills in back-end development, UI/UX design, Web3, and building more advanced projects.</p>
+
+      <div class="skills">
+        <h3>My Skills</h3>
+        <div class="skill">
+          <span>HTML</span>
+          <div class="skill-bar"><div class="skill-fill" data-w="90%"></div></div>
+        </div>
+        <div class="skill">
+          <span>CSS</span>
+          <div class="skill-bar"><div class="skill-fill" data-w="85%"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="skill-bar"><div class="skill-fill" data-w="75%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="education">
+    <div class="container edu-card">
+      <div class="edu-left">
+        <img src="./Assets/AMU_logo.jpg" alt="Arba Minch University logo" class="amu-logo">
+      </div>
+      <div class="edu-right">
+        <h2>Education</h2>
+        <h3>Arba Minch University</h3>
+        <p><strong>🎓 3rd Year — Software Engineering Student</strong></p>
+        <p>Pursuing a well-rounded web development journey, with experience in front-end development and a growing focus on back-end technologies, UI/UX design, Web3, and future projects to expand my skill set.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Responsive HTML & CSS, basic JavaScript interactivity.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Backend Basics</h3>
+          <p>Creating Server-side logic and database managementwith Node.js and SQL</p><br>
+           <p><strong>Coming Soon!</strong></p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>UI/UX Design</h3>
+          <p>Designing User-friendly interfaces and improving user experience for websites</p><br>
+           <p><strong>Coming Soon!</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="portfolio">
+    <div class="container">
+      <h2>My Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="./Assets/soon.jpg" alt="Project 1">
+          <h3>Coming Soon!</h3>
+          <p>This section will showcase my projects. Stay tuned!</p>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="./Assets/soon.jpg" alt="Project 2">
+          <h3>Coming Soon!</h3>
+          <p>This section will showcase my projects. Stay tuned!</p>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="./Assets/soon.jpg" alt="Project 3">
+          <h3>Coming Soon!</h3>
+          <p>This section will showcase my projects. Stay tuned!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Have a project or question? Send me a message.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Get in touch</h3>
+          <p><strong>Email:</strong> <a href="mailto:ahmeddincoder@gmail.com">ahmeddincoder@gmail.com</a></p>
+          <p><strong>Location:</strong> Arba Minch, Ethiopia</p>
+        </div>
+
+        <form id="contact-form" class="contact-form" onsubmit="return false;">
+          <div class="row">
+            <div class="col">
+              <label for="name"><strong>Full Name:</strong></label>
+              <input id="name" type="text" placeholder="Your Name" required>
+            </div><br>
+            <div class="col">
+              <label for="email"><strong>Email:</strong></label>
+              <input id="email" type="email" placeholder="someone@example.com" required>
+            </div>
+          </div><br>
+
+          <label for="message"><strong>Message:</strong></label>
+          <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+
+          <button class="submit-btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 Ahmed. All Rights Reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/ahmed-hussen-dev" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/Ahmeddin" target="_blank">🐱 GitHub</a>
+        <a href="mailto:ahmeddincoder@gmail.com">📧 Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

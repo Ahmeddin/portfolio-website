@@ -1,0 +1,184 @@
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0}
+html,body {
+  height:100%;
+  font-family:Inter,system-ui,Arial;
+  color:#111;background:#fff;
+  scroll-behavior:smooth}
+
+a {
+  color:inherit}
+
+nav, .top-nav { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:18px 32px; 
+  background:#111; 
+  color:#fff; 
+  position:sticky; 
+  top:0; 
+  z-index:120; }
+nav .logo{
+  font-weight:700;
+  font-size:22px;
+  color:#fff}
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:18px;
+  align-items:center}
+.nav-links li{
+  list-style:none}
+.nav-links a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  transition:color .2s}
+.nav-links a:hover{
+  color:#2575fc}
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;color:#fff}
+@media (
+  max-width:880px){
+  .nav-links{display:none;
+    position:absolute;
+    top:64px;
+    right:16px;
+    background:#111;
+    padding:18px;
+    border-radius:8px;
+    flex-direction:column;
+    width:200px}
+  .nav-links.active{
+    display:flex}
+  .menu-toggle{
+    display:block}
+}
+
+.hero-stage{position:relative;height:100vh;overflow:hidden}
+#slides{display:flex;width:max-content;height:100vh;transition:transform .8s ease}
+.slide{flex:0 0 100vw;height:100vh}
+.slide-img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-stage::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(255,255,255,0.20); /* subtle light veil like the reference */
+  pointer-events:none;
+  z-index:5;
+}
+
+.hero-text{
+  position:absolute;
+  left:6%;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:20;
+  color:#000;
+  text-shadow:none; 
+  max-width:720px;
+}
+.hero-name{
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  font-size:clamp(56px, 7vw, 100px); /* big and responsive */
+  line-height:0.86;                  /* tight line-height */
+  letter-spacing:-1px;
+  margin:0 0 6px 0;                  /* small gap between name & subtitle */
+  text-transform:lowercase;          /*  lowercase aesthetic */
+  color:#000;
+}
+.hero-sub{
+  font-family:Inter,system-ui,Arial;
+  font-weight:400;
+  font-size:18px;
+  margin:0 0 12px 0;
+  color:rgba(17,17,17,0.8); /* slightly muted black/gray */
+  max-width:48ch;
+}
+.hero-tags{
+  display:flex;
+  gap:10px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:rgba(17,17,17,0.75);
+}
+
+#about{
+  padding:80px 20px;
+  background:#f9f9f9}
+.container{max-width:1100px;margin:0 auto}
+.about-card{background:#fff;padding:28px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04);text-align:center}
+#about h2{font-family:"Playfair Display",serif;font-size:32px;margin-bottom:12px}
+#about p{max-width:760px;margin:0 auto 18px;color:#374151;line-height:1.6}
+.skills{max-width:700px;margin:18px auto;text-align:left}
+.skill{margin-bottom:16px}
+.skill span{display:block;margin-bottom:6px;font-weight:700}
+.skill-bar{width:100%;background:#e6e6e6;border-radius:6px;height:14px;overflow:hidden}
+.skill-fill{height:100%;background:#2575fc;width:0;transition:width 1s ease}
+
+#education{
+  padding:60px 20px}
+.edu-card{max-width:900px;margin:0 auto;background:#fff;padding:22px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.04);display:flex;gap:20px;align-items:center}
+.edu-left{flex:0 0 120px;display:flex;align-items:center;justify-content:center}
+.edu-left img{max-height:72px; width:auto; display:block; border-radius:6px} /* <-- reduced size */
+.edu-right{flex:1}
+.edu-right h2{margin:0 0 6px;font-family:"Playfair Display",serif}
+.edu-right h3{margin:0 0 6px}
+
+#services{
+  padding:60px 20px}
+#services h2{text-align:center;margin-bottom:28px;font-family:"Playfair Display",serif}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:1100px;margin:0 auto}
+.service-card{background:#f7f7f7;padding:24px;border-radius:12px;text-align:center;transition:transform .25s,box-shadow .25s}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(18,18,18,0.06)}
+.service-icon{font-size:40px;margin-bottom:12px}
+
+#portfolio{
+  padding:60px 20px}
+#portfolio h2{text-align:center;margin-bottom:22px;font-family:"Playfair Display",serif}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;max-width:1000px;margin:0 auto}
+.portfolio-card{background:#f0f0f0;padding:14px;border-radius:10px;text-align:center}
+.portfolio-card img{width:60%;height:110px;object-fit:cover;border-radius:6px;margin-bottom:12px}
+
+#contact{
+  padding:60px 20px;
+  background:#f9f9f9}
+#contact h2{text-align:center;margin-bottom:10px;font-family:"Playfair Display",serif}
+#contact p{text-align:center;margin-bottom:20px}
+.contact-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.contact-card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6;margin-top:8px}
+.submit-btn{margin-top:10px;padding:10px 14px;border-radius:8px;background:#2575fc;color:#fff;border:none;cursor:pointer}
+
+footer{background:#111;
+  color:#fff;
+  padding:24px 20px;
+  text-align:center;
+  margin-top:30px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.footer-social a{color:#fff;text-decoration:none;margin-left:8px}
+.footer-social a:hover{color:#2575fc}
+
+/* ===== RESPONSIVE ===== */
+@media (
+  max-width:980px){
+  .hero-name{font-size:clamp(40px,10vw,64px)}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .edu-card{flex-direction:column;align-items:center;text-align:center}
+  .edu-left{margin-bottom:12px}
+  .portfolio-card img{height:100px}
+}
+@media (
+  max-width:560px){
+  .contact-grid{grid-template-columns:1fr}
+  .hero-text{left:5%;top:40%;transform:translateY(-40%)}
+  .portfolio-card img{height:90px}
+}
